@@ -16,6 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Info"
+            android:label="@string/title_activity_info" >
+        </activity>
+        <activity
+            android:name=".Levels"
+            android:label="@string/title_activity_levels" >
+        </activity>
+        <activity
+            android:name=".Acertijo"
+            android:label="@string/title_activity_acertijo" >
+        </activity>
+        <activity
+            android:name=".Seleccion_acertijo"
+            android:label="@string/title_activity_seleccion_acertijo" >
+        </activity>
     </application>
 
 </manifest>

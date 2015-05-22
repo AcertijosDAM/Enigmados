@@ -3,4 +3,127 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+
+    <string name="play">JUGAR</string>
+    <string name="info">INFO</string>
+
+    <string name="about_us">Somos dos estudiantes del modulo de Formacion Profesional de Desarrollo de Aplicaciones Multiplataforma</string>
+    <string name="about_app">El objetivo principal de la aplicacion es la de buscar hacer de alguna forma dinamico una aplicacion de acertijos, para poder generar entretenimiento el mayor tiempo posible.</string>
+    <string name="about_level">El juego se encuentra dividido en tres niveles en funcion de la dificultad.A partir de una cantidad determinada de respuestas acertadas, se desbloquearan los siguientes niveles </string>
+    <string name="about_points">Cada respuesta acertada te otorga una cantidad de puntos,que se podran utilizar para comprar tanto pistas como respuestas completas</string>
+    <string name="about_cript">Los criptogramas son un nivel extra con dificultad unica que sirve exclusivamente para lograr puntos para gastar en pistas y respuestas, en ningun caso computaran para desbloquear un nuevo nivel</string>
+    <string name="title_activity_levels">Levels</string>
+    <string name="title_activity_acertijo">Acertijo</string>
+
+
+    <!--
+
+        Enunciados y soluciones de los niveles FACILES
+
+    -->
+
+    <string name="facil_01">En un partido de tenis,Nadal gano a Federer un set 6&#8211;3.Cinco juegos los gano el jugador que no servía.¿Quién sirvio primero?</string>
+    <string name="solucion_facil_01">Nadal</string>
+
+    <string name="facil_02">¿Cuantos numeros 9 se necesitan para numerar a todos los portales de una calle si esta tiene 100 portales?</string>
+    <string name="solucion_facil_02">20</string>
+
+    <string name="facil_03">¿Cuantas extremidades tienen 5 centauros?</string>
+    <string name="solucion_facil_03">30</string>
+
+    <string name="facil_04">¿Cuantos medira un angulo de 25º si lo observamos a traves de una lupa de 5 aumentos?</string>
+    <string name="solucion_facil_04">25</string>
+
+    <string name="facil_05">En un taller, dos mecanicos pueden reparar 8 coches en 4 horas.¿Cuantos mecanicos se necesitan para reparar 32 coches en 6 horas?</string>
+    <string name="solucion_facil_05">6</string>
+
+    <string name="facil_06">¿Que numero si le restas la mitad obtienes un cero?</string>
+    <string name="solucion_facil_06">8</string>
+
+    <string name="facil_07">Una chica que esta aprendiendo a conducir estaba bajando por una calle unidireccional en direccion contraria sin cometer ninguna infraccion.¿Como pudo ser?</string>
+    <string name="solucion_facil_07">Marcha atras</string>
+
+    <string name="facil_08">¿Como se puede transportar agua en un colador?</string>
+    <string name="solucion_facil_08">Congelada</string>
+
+    <string name="facil_09">¿Cuantos minutos se necesitan para cocer un huevo duro?</string>
+    <string name="solucion_facil_09">0</string>
+
+    <string name="facil_10">Dos personas estan sentados en un banco.Uno de ellos es el hijo del otro, pero el otro no es padre.¿Quien es entonces?</string>
+    <string name="solucion_facil_10">Madre</string>
+
+    <!--
+
+       Enunciados y soluciones de los niveles MEDIOS
+
+   -->
+
+    <string name="medio_01">Juan esta leyendo un libro por la noche y su mujer le apaga la luz, pero juan puede seguir leyendo¿Como es posible?</string>
+    <string name="solucion_medio_01">Es ciego</string>
+
+    <string name="medio_02">Desayunando hoy, se me cayó un pendiente en el cafe y aunque la taza estaba llena, el pendiente no se mojo.¿Como es posible?</string>
+    <string name="solucion_medio_02">Granos de cafe</string>
+
+    <string name="medio_03">El hijo de Luis es ahora tres veces mas joven que yo. Pero hace cinco años, era cuatro veces mas joven.¿Cuantos años tiene el hijo de Luis?</string>
+    <string name="solucion_medio_03">15</string>
+
+    <string name="medio_04">A una feria iban cada niño con un adulto. Cada adulto pagaba 2 euros y cada niño 1.Si la recaudacion fue de 180€.¿Cuantos niños fueron a la feria?</string>
+    <string name="solucion_medio_04">60</string>
+
+    <string name="medio_05">Si queda del dia la quinta parte de las horas que han pasado,¿Que hora sera? Formato hh:mm</string>
+    <string name="solucion_medio_05">20:00</string>
+
+    <string name="medio_06">Antonieta pesa 60kilos mas que la mitad de su peso total.¿Cuanto pesa Antonieta en kg?</string>
+    <string name="solucion_medio_06">120</string>
+
+    <string name="medio_07">En un cajon hay 11,2€.Si hay igual monedas de 10,5 y 1 centimo.¿Cuantas monedas hay en el cajon?</string>
+    <string name="solucion_medio_07">210</string>
+
+    <string name="medio_08">¿Cual es numero que tiene el mismo numero de letras que la cantidad que representa?</string>
+    <string name="solucion_medio_08">5</string>
+
+    <string name="medio_09">Dada la serie "udtccsson", ¿que letra vendria despues?</string>
+    <string name="solucion_medio_09">d</string>
+
+    <string name="medio_10">Buscamos un numero de 6 cifras con las siguientes condiciones:Ninguna cifra es impar,la primera es un tercio de la quinta y la mitad de la tercera,la segunda es la menor de todas, la ultima es la diferencia entra la cuarta y la quinta.</string>
+    <string name="solucion_medio_10">204862</string>
+
+    <!--
+
+       Enunciados y soluciones de los niveles DIFICILES
+
+   -->
+
+    <string name="dificil_01">¿Que es lo que aun no ha sido,que debe ser y que cuando lo sea ya no lo sera?</string>
+    <string name="solucion_dificil_01">Mañana</string>
+
+    <string name="dificil_02">Un domingo por la tarde, mataron a un señor. Habían 3 sospechosos: la esposa que estaba viendo TV, el cocinero que estaba haciendo el desayuno, y el jardinero que estaba regando las plantas ¿Quién es el asesino?</string>
+    <string name="solucion_dificil_02">Cocinero</string>
+
+    <string name="dificil_03">Soy la primera en la luna, la segunda en plutón, no estoy en la tierra y soy la última en el sol ¿Quién soy?</string>
+    <string name="solucion_dificil_03">L</string>
+
+    <string name="dificil_04">Utilizando operaciones aritmeticas con seis nueves, calcula 100 sin utilizar ningun parentesis ni espacios entre los numeros</string>
+    <string name="solucion_dificil_04">99+99/99</string>
+
+    <string name="dificil_05">La nota media de una clase de 20 alumnos ha sido de 6.Ocho alumnos suspendieron con un 3 y el resto aprobaron.¿Cual es la nota media de los que aprobaron?</string>
+    <string name="solucion_dificil_05">8</string>
+
+    <string name="dificil_06">Suma mil usando solo sumas con el numero 8</string>
+    <string name="solucion_dificil_06">888+88+8+8+8</string>
+
+    <string name="dificil_07">En un cajon hay 11,2€.Si hay igual monedas de 10,5 y 1 centimo.¿Cuantas monedas hay en el cajon?</string>
+    <string name="solucion_dificil_07">210</string>
+
+    <string name="dificil_08">¿Cual es numero que tiene el mismo numero de letras que la cantidad que representa?</string>
+    <string name="solucion_dificil_08">5</string>
+
+    <string name="dificil_09">Dada la serie "udtccsson", ¿que letra vendria despues?</string>
+    <string name="solucion_dificil_09">d</string>
+
+    <string name="dificil_10">Buscamos un numero de 6 cifras con las siguientes condiciones:Ninguna cifra es impar,la primera es un tercio de la quinta y la mitad de la tercera,la segunda es la menor de todas, la ultima es la diferencia entra la cuarta y la quinta.</string>
+    <string name="solucion_dificil_10">204862</string>
+    <string name="title_activity_info">Info</string>
+    <string name="title_activity_seleccion_acertijo">Seleccion_acertijo</string>
 </resources>

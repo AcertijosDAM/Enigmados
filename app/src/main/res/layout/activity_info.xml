@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.jsanz.enigmados.Info"
+    android:background="@color/sky_blue">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:scrollbars="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:id="@+id/title_us"
+                android:text="¿Quienes Somos?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="22dp"/>
+            <TextView
+                android:id="@+id/text_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us"
+                android:layout_below="@id/title_us"
+                android:textSize="17dp"/>
+            <TextView
+                android:id="@+id/title_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Que es esta aplicacion?"
+                android:layout_below="@+id/text_us"
+                android:textColor="#000000"
+                android:textSize="22dp"/>
+            <TextView
+                android:id="@+id/text_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_app"
+                android:layout_below="@+id/title_app"
+                android:textSize="17dp"/>
+            <TextView
+                android:id="@+id/title_levels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_app"
+                android:text="¿Cómo se dividen los Enigmas?"
+                android:textColor="#000000"
+                android:textSize="22dp"/>
+            <TextView
+                android:id="@+id/text_levels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_levels"
+                android:text="@string/about_level"
+                android:textSize="17dp"/>
+            <TextView
+                android:id="@+id/title_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_levels"
+                android:text="¿Cómo conseguir puntos?"
+                android:textColor="#000000"
+                android:textSize="22dp"/>
+            <TextView
+                android:id="@+id/text_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_points"
+                android:text="@string/about_points"
+                android:textSize="17dp"/>
+            <TextView
+                android:id="@+id/title_cript"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_points"
+                android:text="¿Qué son los criptogramas?"
+                android:textColor="#000000"
+                android:textSize="22dp"/>
+            <TextView
+                android:id="@+id/text_cript"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_cript"
+                android:text="@string/about_cript"
+                android:textSize="17dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BACK"
+                android:id="@+id/btn_back"
+
+                android:layout_centerHorizontal="true"
+                android:onClick="goBack"
+                android:layout_below="@+id/text_cript"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
