@@ -212,6 +212,7 @@ public class Acertijo extends Activity {
             CharSequence text = "Respuesta correcta";
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
+            finish();
 
         }else{
             Context context = getApplicationContext();
