@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class SQLHelper extends SQLiteOpenHelper{
-    String crearTabla= "CREATE TABLE ENIGMAS (id NUMBER primary key, completado CHAR(1))";
+    String crearTabla= "CREATE TABLE ENIGMAS (id NUMBER primary key, acertado CHAR(1))";
     public SQLHelper(Context contexto, String nombre, CursorFactory factory, int version){
         super(contexto,nombre,factory,version);
     }
