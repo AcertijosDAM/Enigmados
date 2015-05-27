@@ -52,8 +52,6 @@ public class SQLHelper extends SQLiteOpenHelper{
             db.execSQL("insert into enigmas values("+enigmas[i]+",'N')");
 
         }
-
-
         }
 
 

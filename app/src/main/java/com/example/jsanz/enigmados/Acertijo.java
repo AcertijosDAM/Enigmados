@@ -30,6 +30,7 @@ public class Acertijo extends Activity {
         et=(EditText) findViewById(R.id.et_answer);
 
         rellenarDatos(acertijo);
+
     }
 
     public void rellenarDatos(String acertijo){
