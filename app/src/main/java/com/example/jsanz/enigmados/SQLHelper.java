@@ -45,9 +45,16 @@ public class SQLHelper extends SQLiteOpenHelper{
                 R.string.dificil_07,
                 R.string.dificil_08,
                 R.string.dificil_09,
-                R.string.dificil_10};
+                R.string.dificil_10,
+                R.string.criptograma_01,
+                R.string.criptograma_02,
+                R.string.criptograma_03,
+                R.string.criptograma_04,
+                R.string.criptograma_05,
+                R.string.criptograma_06,
+                R.string.criptograma_07};
 
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 36; i++) {
 
             db.execSQL("insert into enigmas values("+enigmas[i]+",'N')");
 

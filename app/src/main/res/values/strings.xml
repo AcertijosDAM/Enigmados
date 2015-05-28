@@ -124,6 +124,47 @@
 
     <string name="dificil_10">Buscamos un numero de 6 cifras con las siguientes condiciones:Ninguna cifra es impar,la primera es un tercio de la quinta y la mitad de la tercera,la segunda es la menor de todas, la ultima es la diferencia entra la cuarta y la quinta.</string>
     <string name="solucion_dificil_10">204862</string>
+
+    <!--
+
+     Enunciados y soluciones de los niveles MEDIOS
+
+ -->
+
+    <string name="criptograma_01">PAR + RAS = ASSA. Averiguar el valor de ASSA</string>
+    <string name="solucion_criptograma_01">1331</string>
+
+    <string name="criptograma_02">EAT + THAT = APPLE . Averiguar el valor de APPLE</string>
+    <string name="solucion_criptograma_02">10038</string>
+
+    <string name="criptograma_03">ABC23D + C4EFGB = B769C7 .Averiguar el valor de las letras.(Formato : ABCDEFG)</string>
+    <string name="solucion_criptograma_03">2314568</string>
+
+    <string name="criptograma_04">3A2ABC + C8A4DD = E1DE19. Averiguar el valor de las letras.(Formato: ABCDE)</string>
+    <string name="solucion_criptograma_04">36458</string>
+
+    <string name="criptograma_05">ABC32D + D2AEBA= F69BC8 . Averiguar el valor de las letras (Formato: ABCDEF) :</string>
+    <string name="solucion_criptograma_05">346518</string>
+
+    <string name="criptograma_06">R1G + 1G3 + 305 = GN5.Averiguar el valor de las letras (Formato: GNR)</string>
+    <string name="solucion_criptograma_06">795</string>
+
+    <string name="criptograma_07">3AB32C + B2DECA = F51CD6. Averiguar el valor de las letras (Formato: ABCDEF)</string>
+    <string name="solucion_criptograma_07">254618</string>
+<!--
+    <string name="criptograma_08">¿Cual es numero que tiene el mismo numero de letras que la cantidad que representa?</string>
+    <string name="solucion_criptograma_08">5</string>
+
+    <string name="criptograma_09">Dada la serie "udtccsson", ¿que letra vendria despues?</string>
+    <string name="solucion_criptograma_09">d</string>
+
+    <string name="criptograma_10">Buscamos un numero de 6 cifras con las siguientes condiciones:Ninguna cifra es impar,la primera es un tercio de la quinta y la mitad de la tercera,la segunda es la menor de todas, la ultima es la diferencia entra la cuarta y la quinta.</string>
+    <string name="solucion_criptograma_10">204862</string>
+    -->
+
+
+
+
     <string name="title_activity_info">Info</string>
     <string name="title_activity_seleccion_acertijo">Seleccion_acertijo</string>
 </resources>
