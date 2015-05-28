@@ -11,6 +11,25 @@ import android.view.View;
 
 public class MainActivity extends Activity {
 
+    public static int puntos = 0;
+    public static int acertados=0;
+
+    public static int getPuntos() {
+        return puntos;
+    }
+
+    public static void setPuntos(int puntos) {
+        MainActivity.puntos = puntos;
+    }
+
+    public static int getAcertados() {
+        return acertados;
+    }
+
+    public static void setAcertados(int acertados) {
+        MainActivity.acertados = acertados;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

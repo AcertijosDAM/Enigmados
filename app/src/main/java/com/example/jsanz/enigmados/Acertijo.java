@@ -23,6 +23,8 @@ public class Acertijo extends Activity {
     SQLHelper sqlh = new SQLHelper(this,"enigmas",null,1);
     SQLiteDatabase db = sqlh.getWritableDatabase();
     int id;
+    int puntos = MainActivity.getPuntos();
+    int acertados= MainActivity.getAcertados();
 
 
     @Override

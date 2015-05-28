@@ -17,6 +17,7 @@ public class Levels extends Activity {
     private ListView list;
     private String[] levels = {"Facil","Medio","Dificil","Criptogramas"};
     String level="";
+    int acertados= MainActivity.getAcertados();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
