@@ -20,8 +20,8 @@ public class Acertijo extends Activity {
     String prueba;
     TextView tv;
     EditText et;
-    SQLHelper sqlh = new SQLHelper(this,"enigmas",null,1);
-    SQLiteDatabase db = sqlh.getWritableDatabase();
+    //SQLHelper sqlh ;
+    //SQLiteDatabase db ;
     int id;
     int puntos = MainActivity.getPuntos();
     int acertados= MainActivity.getAcertados();
@@ -39,7 +39,11 @@ public class Acertijo extends Activity {
 
         rellenarDatos(acertijo);
 
+       // sqlh = new SQLHelper(this,"enigmas",null,1);
+       // db = sqlh.getWritableDatabase();
+
     }
+
 
     public void rellenarDatos(String acertijo){
 
@@ -251,7 +255,7 @@ public class Acertijo extends Activity {
             CharSequence text = "Respuesta correcta";
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-            db.execSQL("update enigmas set acertado='S' where id="+id);
+            //db.execSQL("update enigmas set acertado='S' where id="+id);
             finish();
 
         }else{
