@@ -255,7 +255,11 @@ public class Acertijo extends Activity {
             CharSequence text = "Respuesta correcta";
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-            //db.execSQL("update enigmas set acertado='S' where id="+id);
+            SQLHelper sqlh ;
+            SQLiteDatabase db ;
+            sqlh = new SQLHelper(this,"enigmas",null,1);
+            db = sqlh.getWritableDatabase();
+            db.execSQL("update enigmas set acertado='S' where id="+id);
             finish();
 
         }else{

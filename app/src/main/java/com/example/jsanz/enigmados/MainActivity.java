@@ -83,10 +83,10 @@ public class MainActivity extends Activity {
 
         for (int i = 0; i < 36; i++) {
 
-            db.execSQL("INSERT INTO enigmas VALUESE("+enigmas[i]+",'N')");
+            db.execSQL("INSERT INTO enigmas VALUES("+enigmas[i]+",'N')");
 
         }
-
+            db.close();
     }
 
 
