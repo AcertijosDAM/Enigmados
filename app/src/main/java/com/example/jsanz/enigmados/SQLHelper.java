@@ -14,7 +14,6 @@ public class SQLHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(crearTabla);
-
         int enigmas []={
                 R.string.facil_01,
                 R.string.facil_02,
@@ -59,7 +58,9 @@ public class SQLHelper extends SQLiteOpenHelper{
             db.execSQL("INSERT INTO enigmas VALUES("+enigmas[i]+",'N')");
 
         }
-        db.close();
+
+
+
 
 
 
