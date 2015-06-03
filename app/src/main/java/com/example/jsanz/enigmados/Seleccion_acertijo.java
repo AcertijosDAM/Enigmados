@@ -54,6 +54,7 @@ public class Seleccion_acertijo extends Activity {
                 public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
 
                     acertijo=list.getItemAtPosition(position).toString();
+
                     Intent i = new Intent(getApplicationContext(),Acertijo.class);
                     Bundle easy= new Bundle();
                     easy.putString("enigma",acertijo);
