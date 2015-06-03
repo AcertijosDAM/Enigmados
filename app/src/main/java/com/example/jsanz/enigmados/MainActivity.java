@@ -15,8 +15,8 @@ public class MainActivity extends Activity {
     SQLiteDatabase db ;
 
 
-    public static int puntos = 24;
-    public static int acertados=0;
+    public static int puntos ;
+    public static int acertados;
 
     public static int getPuntos() {
         return puntos;

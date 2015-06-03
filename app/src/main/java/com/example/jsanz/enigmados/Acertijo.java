@@ -63,6 +63,8 @@ public class Acertijo extends Activity {
 
     public void rellenarDatos(String acertijo){
 
+        pts.setText(probar);
+        acrts.setText(probar2);
 
 
         switch(acertijo){
@@ -71,8 +73,7 @@ public class Acertijo extends Activity {
             case "Facil 01": enunciado= getString(R.string.facil_01);
                 respuesta=getString(R.string.solucion_facil_01);
                 id=R.string.facil_01;
-                pts.setText(probar);
-                acrts.setText(probar2);
+
 
                 tv.setText(enunciado);
 

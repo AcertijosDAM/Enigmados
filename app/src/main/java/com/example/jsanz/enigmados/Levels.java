@@ -17,12 +17,19 @@ public class Levels extends Activity {
     private ListView list;
     private String[] levels = {"Facil","Medio","Dificil","Criptogramas"};
     String level="";
-    int acertados= MainActivity.getAcertados();
+    int points = MainActivity.getPuntos();
+    int aciertos=MainActivity.getAcertados();
+    String prueba;
+    String prueba2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levels);
+
+        prueba=Integer.toString(points);
+        prueba2=Integer.toString(aciertos);
 
         list=(ListView) findViewById(R.id.list_levels);
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,levels);

@@ -1,6 +1,7 @@
 package com.example.jsanz.enigmados;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,12 +11,17 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 public class Seleccion_acertijo extends Activity {
 
     private ListView list;
     String acertijo="";
+    int points = MainActivity.getPuntos();
+    int aciertos=MainActivity.getAcertados();
+    String prueba;
+    String prueba2;
 
 
     private String[] facil = {"Facil 01", "Facil 02", "Facil 03","Facil 04","Facil 05",
@@ -31,6 +37,9 @@ public class Seleccion_acertijo extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccion_acertijo);
+
+        prueba=Integer.toString(points);
+        prueba2=Integer.toString(aciertos);
 
         Bundle datos= getIntent().getExtras();
         String nivel = datos.getString("key");
@@ -54,7 +63,31 @@ public class Seleccion_acertijo extends Activity {
                 }
 
             });
-        }else if(nivel.equals("Medio")){
+        }else if(nivel.equals("Medio")& aciertos<5){
+           /* ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, medio);
+            list.setAdapter(adaptador);
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+
+                public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
+
+                    acertijo=list.getItemAtPosition(position).toString();
+                    Intent i = new Intent(getApplicationContext(),Acertijo.class);
+                    Bundle medium=new Bundle();
+                    medium.putString("enigma",acertijo);
+                    i.putExtras(medium);
+                    startActivity(i);
+
+                }
+
+            });*/Context context = getApplicationContext();
+            int duration = Toast.LENGTH_SHORT;
+            CharSequence text = "Todavia no puedes seleccionar este nivel.";
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+
+        }
+        else if(nivel.equals("Medio")& aciertos>=5){
             ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, medio);
             list.setAdapter(adaptador);
             list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
