@@ -36,6 +36,23 @@
         android:layout_gravity="center_horizontal|bottom"
         android:onClick="onComprobar"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/puntos"
+        android:layout_above="@+id/et_answer"
+        android:layout_alignStart="@+id/et_answer"
+        android:layout_marginBottom="99dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/aciertos"
+        android:layout_alignTop="@+id/puntos"
+        android:layout_alignStart="@+id/puntos"
+        android:layout_marginTop="29dp" />
 
 
 </RelativeLayout>

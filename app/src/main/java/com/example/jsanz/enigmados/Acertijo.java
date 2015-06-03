@@ -20,6 +20,13 @@ public class Acertijo extends Activity {
     String prueba;
     TextView tv;
     EditText et;
+    TextView pts;
+    TextView acrts;
+    int points = MainActivity.getPuntos();
+    int aciertos = MainActivity.getAcertados();
+    String probar;
+    String probar2;
+
     //SQLHelper sqlh ;
     //SQLiteDatabase db ;
     int id;
@@ -36,6 +43,15 @@ public class Acertijo extends Activity {
         acertijo=datos.getString("enigma");
         tv=(TextView) findViewById(R.id.enunciado);
         et=(EditText) findViewById(R.id.et_answer);
+        pts = (TextView) findViewById(R.id.puntos);
+        acrts = (TextView) findViewById(R.id.aciertos);
+
+        probar=Integer.toString(points);
+        probar2=Integer.toString(aciertos);
+        /*
+
+        pts.setText(probar);
+        acrts.setText(aciertos);*/
 
         rellenarDatos(acertijo);
 
@@ -55,8 +71,11 @@ public class Acertijo extends Activity {
             case "Facil 01": enunciado= getString(R.string.facil_01);
                 respuesta=getString(R.string.solucion_facil_01);
                 id=R.string.facil_01;
+                pts.setText(probar);
+                acrts.setText(probar2);
 
                 tv.setText(enunciado);
+
                 break;
             case "Facil 02": enunciado= getString(R.string.facil_02);
                 respuesta=getString(R.string.solucion_facil_02);
@@ -250,6 +269,12 @@ public class Acertijo extends Activity {
 
         if(prueba.equals(respuesta)){
             Context context = getApplicationContext();
+            points = points+10;
+            MainActivity.setPuntos(points);
+            aciertos= aciertos +1;
+            MainActivity.setAcertados(aciertos);
+
+
 
             int duration = Toast.LENGTH_SHORT;
             CharSequence text = "Respuesta correcta";
