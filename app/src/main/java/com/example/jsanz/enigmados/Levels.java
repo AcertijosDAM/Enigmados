@@ -11,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 
 public class Levels extends Activity {
 
@@ -32,6 +34,9 @@ public class Levels extends Activity {
         prueba2=Integer.toString(aciertos);
 
         list=(ListView) findViewById(R.id.list_levels);
+        /*ArrayList<Niveles> niveles = obtenerNiveles();
+        ItemNivelAdapter adapter = new ItemNivelAdapter(this,niveles);
+        list.setAdapter(adapter);*/
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,levels);
         list.setAdapter(adaptador);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -49,8 +54,18 @@ public class Levels extends Activity {
         });
 
     }
+    /*
+    private ArrayList<Niveles> obtenerNiveles(){
+
+        ArrayList<Niveles> items = new ArrayList<Niveles>();
+        items.add(new ItemNivel( "Facil", "drawable/patatas"));
+        items.add(new ItemCompra( "Medio", "drawable/naranjas"));
+        items.add(new ItemCompra( "Dificil",  "drawable/lechuga"));
+
+        return items;
 
 
+    }*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

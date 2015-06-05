@@ -71,7 +71,7 @@ public class Acertijo extends Activity {
             //niveles faciles
 
             case "Facil 01": enunciado= getString(R.string.facil_01);
-                respuesta=getString(R.string.solucion_facil_01);
+                respuesta=getString(R.string.solucion_facil_01).toLowerCase();
                 id=R.string.facil_01;
 
 
@@ -108,13 +108,13 @@ public class Acertijo extends Activity {
                 tv.setText(enunciado);
                 break;
             case "Facil 07": enunciado= getString(R.string.facil_07);
-                respuesta=getString(R.string.solucion_facil_07);
+                respuesta=getString(R.string.solucion_facil_07).toLowerCase();
                 id=R.string.facil_07;
 
                 tv.setText(enunciado);
                 break;
             case "Facil 08": enunciado= getString(R.string.facil_08);
-                respuesta=getString(R.string.solucion_facil_08);
+                respuesta=getString(R.string.solucion_facil_08).toLowerCase();
                 id=R.string.facil_08;
 
                 tv.setText(enunciado);
@@ -126,7 +126,7 @@ public class Acertijo extends Activity {
                 tv.setText(enunciado);
                 break;
             case "Facil 10": enunciado= getString(R.string.facil_10);
-                respuesta=getString(R.string.solucion_facil_10);
+                respuesta=getString(R.string.solucion_facil_10).toLowerCase();
                 id=R.string.facil_10;
 
                 tv.setText(enunciado);
@@ -135,13 +135,13 @@ public class Acertijo extends Activity {
 
 
             case "Medio 01": enunciado= getString(R.string.medio_01);
-                respuesta=getString(R.string.solucion_medio_01);
+                respuesta=getString(R.string.solucion_medio_01).toLowerCase();
                 id=R.string.medio_01;
 
                 tv.setText(enunciado);
                 break;
             case "Medio 02": enunciado= getString(R.string.medio_02);
-                respuesta=getString(R.string.solucion_medio_02);
+                respuesta=getString(R.string.solucion_medio_02).toLowerCase();
                 id=R.string.medio_02;
 
                 tv.setText(enunciado);
@@ -198,19 +198,19 @@ public class Acertijo extends Activity {
             //niveles difciles
 
             case "Dificil 01": enunciado= getString(R.string.dificil_01);
-                respuesta=getString(R.string.solucion_dificil_01);
+                respuesta=getString(R.string.solucion_dificil_01).toLowerCase();
                 id=R.string.dificil_01;
 
                 tv.setText(enunciado);
                 break;
             case "Dificil 02": enunciado= getString(R.string.dificil_02);
-                respuesta=getString(R.string.solucion_dificil_02);
+                respuesta=getString(R.string.solucion_dificil_02).toLowerCase();
                 id=R.string.dificil_02;
 
                 tv.setText(enunciado);
                 break;
             case "Dificil 03": enunciado= getString(R.string.dificil_03);
-                respuesta=getString(R.string.solucion_dificil_03);
+                respuesta=getString(R.string.solucion_dificil_03).toLowerCase();
                 id=R.string.dificil_03;
 
                 tv.setText(enunciado);
@@ -254,6 +254,51 @@ public class Acertijo extends Activity {
             case "Dificil 10": enunciado= getString(R.string.dificil_10);
                 respuesta=getString(R.string.solucion_dificil_10);
                 id=R.string.dificil_10;
+
+                tv.setText(enunciado);
+                break;
+
+            //Criptogramas
+
+            case "Criptograma 01": enunciado= getString(R.string.criptograma_01);
+                respuesta=getString(R.string.solucion_criptograma_01);
+                id=R.string.criptograma_01;
+
+                tv.setText(enunciado);
+                break;
+            case "Criptograma 02": enunciado= getString(R.string.criptograma_02);
+                respuesta=getString(R.string.solucion_criptograma_02);
+                id=R.string.criptograma_02;
+
+                tv.setText(enunciado);
+                break;
+            case "Criptograma 03": enunciado= getString(R.string.criptograma_03);
+                respuesta=getString(R.string.solucion_criptograma_03);
+                id=R.string.criptograma_03;
+
+                tv.setText(enunciado);
+                break;
+            case "Criptograma 04": enunciado= getString(R.string.criptograma_04);
+                respuesta=getString(R.string.solucion_criptograma_04);
+                id=R.string.criptograma_04;
+
+                tv.setText(enunciado);
+                break;
+            case "Criptograma 05": enunciado= getString(R.string.criptograma_05);
+                respuesta=getString(R.string.solucion_criptograma_05);
+                id=R.string.criptograma_05;
+
+                tv.setText(enunciado);
+                break;
+            case "Criptograma 06": enunciado= getString(R.string.criptograma_06);
+                respuesta=getString(R.string.solucion_criptograma_06);
+                id=R.string.criptograma_06;
+
+                tv.setText(enunciado);
+                break;
+            case "Criptograma 07": enunciado= getString(R.string.criptograma_07);
+                respuesta=getString(R.string.solucion_criptograma_07);
+                id=R.string.criptograma_07;
 
                 tv.setText(enunciado);
                 break;

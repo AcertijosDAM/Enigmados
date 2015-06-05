@@ -22,6 +22,8 @@ public class Seleccion_acertijo extends Activity {
     int aciertos=MainActivity.getAcertados();
     String prueba;
     String prueba2;
+    int nec_medio;
+    int nec_dificil;
 
 
     private String[] facil = {"Facil 01", "Facil 02", "Facil 03","Facil 04","Facil 05",
@@ -31,7 +33,7 @@ public class Seleccion_acertijo extends Activity {
     private String[] dificil = {"Dificil 01", "Dificil 02", "Dificil 03","Dificil 04","Dificil 05",
             "Dificil 06","Dificil 07","Dificil 08","Dificil 09","Dificil 10"};
     private String[] criptogramas = {"Criptograma 01", "Criptograma 02", "Criptograma 03","Criptograma 04","Criptograma 05",
-            "Criptograma 06","Criptograma 07","Criptograma 08","Criptograma 09","Criptograma 10"};
+            "Criptograma 06","Criptograma 07"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +66,7 @@ public class Seleccion_acertijo extends Activity {
                 }
 
             });
-        }else if(nivel.equals("Medio")& aciertos<5){
+        }else if(nivel.equals("Medio")& aciertos<7){
            /* ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, medio);
             list.setAdapter(adaptador);
             list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -81,14 +83,16 @@ public class Seleccion_acertijo extends Activity {
 
                 }
 
-            });*/Context context = getApplicationContext();
+            });*/
+            nec_medio= 7- aciertos;
+            Context context = getApplicationContext();
             int duration = Toast.LENGTH_SHORT;
-            CharSequence text = "Todavia no puedes seleccionar este nivel.";
+            CharSequence text = "Todavia no puedes seleccionar este nivel.Tienes que resolver "+nec_medio + " enigmas mas";
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
 
         }
-        else if(nivel.equals("Medio")& aciertos>=5){
+        else if(nivel.equals("Medio")& aciertos>=7){
             ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, medio);
             list.setAdapter(adaptador);
             list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -106,8 +110,8 @@ public class Seleccion_acertijo extends Activity {
                 }
 
             });
-        }else if(nivel.equals("Dificil")){
-            ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dificil);
+        }else if(nivel.equals("Dificil")& aciertos<15){
+           /* ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dificil);
             list.setAdapter(adaptador);
             list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
@@ -118,6 +122,30 @@ public class Seleccion_acertijo extends Activity {
                     Intent i = new Intent(getApplicationContext(),Acertijo.class);
                     Bundle hard= new Bundle();
                     hard.putString("enigma",acertijo);
+                    i.putExtras(hard);
+                    startActivity(i);
+
+                }
+
+            });*/
+            nec_dificil= 15 - aciertos;
+            Context context = getApplicationContext();
+            int duration = Toast.LENGTH_SHORT;
+            CharSequence text = "Todavia no puedes seleccionar este nivel.Tienes que resolver "+ nec_dificil + " enigmas más";
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }else if(nivel.equals("Dificil")& aciertos>=15) {
+            ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dificil);
+            list.setAdapter(adaptador);
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+                public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
+
+                    acertijo = list.getItemAtPosition(position).toString();
+                    Intent i = new Intent(getApplicationContext(), Acertijo.class);
+                    Bundle hard = new Bundle();
+                    hard.putString("enigma", acertijo);
                     i.putExtras(hard);
                     startActivity(i);
 
