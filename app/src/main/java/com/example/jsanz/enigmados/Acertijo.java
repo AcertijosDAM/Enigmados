@@ -2,6 +2,7 @@ package com.example.jsanz.enigmados;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.database.sqlite.SQLiteDatabase;
+import android.view.Window;
+import android.widget.Button;
 
 
 
@@ -36,12 +39,15 @@ public class Acertijo extends Activity {
     ImageView iv;
     TextView tv2;
     String msj_puntos;
+    String pista;
+    String txt_pista2="Estas seguro de que quieres comprar una pista por 10 puntos?";
 
     SQLHelper sqlh ;
     SQLiteDatabase db ;
     int id;
     int puntos = MainActivity.getPuntos();
     int acertados= MainActivity.getAcertados();
+    Dialog customDialog ;
 
 
     @Override
@@ -422,55 +428,94 @@ public class Acertijo extends Activity {
     View.OnClickListener Pista = new View.OnClickListener(){
         @Override
         public void onClick(View v) {
-            mostrarPuntos();
+            customDialog = new Dialog(Acertijo.this,R.style.Theme_Dialog_Translucent);
 
-            if (numPistas==0 && points>=10){
-                pts.setText(pista1);
-                numPistas= numPistas + 1;
-                points= points-10;
+            customDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
+            customDialog.setCancelable(false);
 
-                MainActivity.setAcertados(aciertos);
-                MainActivity.setPuntos(points);
+            customDialog.setContentView(R.layout.pop_up_pista);
 
-                mostrarPuntos();
+            TextView titulo = (TextView) customDialog.findViewById(R.id.titulo);
+            titulo.setText("Comprar Pista");
 
-            }else if(numPistas == 1 && points>=60 ){
-                acrts.setText(pista2);
-                numPistas= numPistas+1;
-                points = points - 60;
-                MainActivity.setAcertados(aciertos);
-                MainActivity.setPuntos(points);
-                tv2.setText(msj_puntos);
-                mostrarPuntos();
+            TextView contenido = (TextView) customDialog.findViewById(R.id.contenido);
+            contenido.setText("¿Estas seguro de que deseas comprar una pista?");
 
-            }else if (numPistas ==0 && points<10){
-                MainActivity.setAcertados(aciertos);
-                Context context = getApplicationContext();
-                int duration = Toast.LENGTH_SHORT;
-                CharSequence text = "No tienes suficientes puntos para comprar una pista";
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-                MainActivity.setPuntos(points);
+            ((Button) customDialog.findViewById(R.id.aceptar)).setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v)
+                {
+                    customDialog.dismiss();
+                    comprobarPista();
 
 
 
-            }else if (numPistas ==1 && points<60){
-                MainActivity.setAcertados(aciertos);
-                Context context = getApplicationContext();
-                int duration = Toast.LENGTH_SHORT;
-                CharSequence text = "No tienes suficientes puntos para comprar una pista";
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-                MainActivity.setPuntos(points);
+                }
+            });
 
-            }
+            ((Button) customDialog.findViewById(R.id.cancelar)).setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v)
+                {
+                    customDialog.dismiss();
+
+
+                }
+            });
+
+            customDialog.show();
+
 
 
 
         }
 
     };
+    public void comprobarPista(){
+        if (numPistas==0 && points>=10){
+
+            pts.setText(pista1);
+            numPistas= numPistas + 1;
+            points= points-10;
+
+
+            MainActivity.setAcertados(aciertos);
+            MainActivity.setPuntos(points);
+
+            mostrarPuntos();
+
+        }else if(numPistas == 1 && points>=60 ){
+            acrts.setText(pista2);
+            numPistas= numPistas+1;
+            points = points - 60;
+            MainActivity.setAcertados(aciertos);
+            MainActivity.setPuntos(points);
+            tv2.setText(msj_puntos);
+            mostrarPuntos();
+
+        }else if (numPistas ==0 && points<10){
+            MainActivity.setAcertados(aciertos);
+            Context context = getApplicationContext();
+            int duration = Toast.LENGTH_SHORT;
+            CharSequence text = "No tienes suficientes puntos para comprar una pista";
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+            MainActivity.setPuntos(points);
+
+
+
+        }else if (numPistas ==1 && points<60){
+            MainActivity.setAcertados(aciertos);
+            Context context = getApplicationContext();
+            int duration = Toast.LENGTH_SHORT;
+            CharSequence text = "No tienes suficientes puntos para comprar una pista";
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+            MainActivity.setPuntos(points);
+    }}
     public void onBackPressed(){
         MainActivity.setAcertados(aciertos);
         MainActivity.setAcertados(aciertos);
@@ -481,6 +526,9 @@ public class Acertijo extends Activity {
         msj_puntos = "Tienes "+probar+" puntos";
         tv2.setText(msj_puntos);
     }
+
+
+
 
 
     @Override

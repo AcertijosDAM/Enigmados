@@ -2,4 +2,7 @@
 <resources>
     <color name="sky_blue">#58FAF4</color>
     <color name="blue">#0431B4</color>
+    <color name="button_normal">#929392</color>
+    <color name="button_pressed">#c0c1c0</color>
+    <color name="dialog_divider">@android:color/black</color>
 </resources>

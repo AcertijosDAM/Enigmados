@@ -68,7 +68,7 @@
         android:src="@mipmap/bombilla"
         android:layout_alignTop="@+id/button"
         android:layout_alignParentEnd="true"
-        android:onClick="onPista"/>
+        android:onClick="Pista"/>
 
     <TextView
         android:layout_width="wrap_content"
