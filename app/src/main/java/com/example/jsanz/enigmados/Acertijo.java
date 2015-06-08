@@ -27,8 +27,8 @@ public class Acertijo extends Activity {
     String probar;
     String probar2;
 
-    //SQLHelper sqlh ;
-    //SQLiteDatabase db ;
+    SQLHelper sqlh ;
+    SQLiteDatabase db ;
     int id;
     int puntos = MainActivity.getPuntos();
     int acertados= MainActivity.getAcertados();
@@ -55,8 +55,8 @@ public class Acertijo extends Activity {
 
         rellenarDatos(acertijo);
 
-       // sqlh = new SQLHelper(this,"enigmas",null,1);
-       // db = sqlh.getWritableDatabase();
+        sqlh = new SQLHelper(this,"enigmas",null,1);
+        db = sqlh.getWritableDatabase();
 
     }
 
