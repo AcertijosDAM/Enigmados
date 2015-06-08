@@ -422,15 +422,18 @@ public class Acertijo extends Activity {
     View.OnClickListener Pista = new View.OnClickListener(){
         @Override
         public void onClick(View v) {
+            mostrarPuntos();
 
             if (numPistas==0 && points>=10){
                 pts.setText(pista1);
                 numPistas= numPistas + 1;
                 points= points-10;
 
+
                 MainActivity.setAcertados(aciertos);
                 MainActivity.setPuntos(points);
-                tv2.setText(msj_puntos);
+
+                mostrarPuntos();
 
             }else if(numPistas == 1 && points>=60 ){
                 acrts.setText(pista2);
@@ -439,6 +442,7 @@ public class Acertijo extends Activity {
                 MainActivity.setAcertados(aciertos);
                 MainActivity.setPuntos(points);
                 tv2.setText(msj_puntos);
+                mostrarPuntos();
 
             }else if (numPistas ==0 && points<10){
                 MainActivity.setAcertados(aciertos);
@@ -471,6 +475,11 @@ public class Acertijo extends Activity {
         MainActivity.setAcertados(aciertos);
         MainActivity.setAcertados(aciertos);
         finish();
+    }
+    public void mostrarPuntos(){
+        probar=Integer.toString(points);
+        msj_puntos = "Tienes "+probar+" puntos";
+        tv2.setText(msj_puntos);
     }
 
 
