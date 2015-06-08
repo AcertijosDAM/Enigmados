@@ -1,16 +1,20 @@
 package com.example.jsanz.enigmados;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -24,6 +28,7 @@ public class Seleccion_acertijo extends Activity {
     String prueba2;
     int nec_medio;
     int nec_dificil;
+
 
 
     private String[] facil = {"Facil 01", "Facil 02", "Facil 03","Facil 04","Facil 05",
@@ -47,6 +52,7 @@ public class Seleccion_acertijo extends Activity {
         String nivel = datos.getString("key");
         list = (ListView)findViewById(R.id.list_acertijos);
 
+
         if(nivel.equals("Facil")){
             ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, facil);
             list.setAdapter(adaptador);
@@ -67,24 +73,28 @@ public class Seleccion_acertijo extends Activity {
 
             });
         }else if(nivel.equals("Medio")& aciertos<7){
-           /* ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, medio);
-            list.setAdapter(adaptador);
+            /*ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, medio);
+            list.setAdapter(adaptador);*/
             list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
 
 
                 public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
 
-                    acertijo=list.getItemAtPosition(position).toString();
+                    /*acertijo=list.getItemAtPosition(position).toString();
                     Intent i = new Intent(getApplicationContext(),Acertijo.class);
                     Bundle medium=new Bundle();
                     medium.putString("enigma",acertijo);
                     i.putExtras(medium);
-                    startActivity(i);
+                    startActivity(i);*/
+
 
                 }
 
-            });*/
+            });
             nec_medio= 7- aciertos;
+
+
             Context context = getApplicationContext();
             int duration = Toast.LENGTH_SHORT;
             CharSequence text = "Todavia no puedes seleccionar este nivel.Tienes que resolver "+nec_medio + " enigmas mas";
@@ -174,6 +184,26 @@ public class Seleccion_acertijo extends Activity {
         }
     }
 
+    public void popUpMedio(){
+        LayoutInflater inflater = getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.pop_up_levels, null);
+        TextView txt_level = (TextView) findViewById(R.id.txt_popUp);
+        txt_level.setText("Todavia no puedes seleccionar este nivel.Tienes que resolver ");
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setView(dialoglayout).setPositiveButton("Aceptar",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+
+            }
+        });
+
+        builder.show();
+
+
+
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

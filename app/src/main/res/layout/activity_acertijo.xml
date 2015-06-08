@@ -18,7 +18,7 @@
         android:textSize="19dp"/>
 
     <EditText
-        android:layout_width="240dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/et_answer"
         android:layout_above="@+id/button"
@@ -44,7 +44,10 @@
         android:id="@+id/puntos"
         android:layout_above="@+id/et_answer"
         android:layout_alignStart="@+id/et_answer"
-        android:layout_marginBottom="99dp" />
+        android:layout_marginBottom="99dp"
+        android:textColor="@color/blue"
+        android:textSize="22dp"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -53,7 +56,30 @@
         android:id="@+id/aciertos"
         android:layout_alignTop="@+id/puntos"
         android:layout_alignStart="@+id/puntos"
-        android:layout_marginTop="29dp" />
+        android:layout_marginTop="29dp"
+        android:textColor="@color/blue"
+        android:textSize="22dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:id="@+id/bombilla"
+        android:src="@mipmap/bombilla"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:onClick="onPista"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textView"
+        android:layout_above="@+id/et_answer"
+        android:layout_alignStart="@+id/et_answer"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
 
 </RelativeLayout>
